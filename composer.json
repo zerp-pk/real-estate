@@ -3,11 +3,24 @@
     "description": "Real Estate Brokerage module for Zerp - property/listing management and viewings",
     "type": "library",
     "license": "MIT",
-    "require": {},
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0 || ^10.0"
+    },
     "autoload": {
         "psr-4": {
             "Zerp\\RealEstate\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zerp\\RealEstate\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
     },
     "authors": [
         {
