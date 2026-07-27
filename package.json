@@ -1,0 +1,13 @@
+{
+  "name": "@zerp/real-estate",
+  "version": "1.0.0",
+  "description": "Real Estate Brokerage module for Zerp - property/listing management and viewings",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@inertiajs/react": "^1.0.0",
+    "lucide-react": "^0.378.0",
+    "react": "^18.2.0",
+    "react-i18next": "^15.6.1"
+  }
+}
