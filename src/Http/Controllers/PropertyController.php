@@ -40,7 +40,7 @@ class PropertyController extends Controller
             ->when(request('city'), fn ($q) => $q->where('city', 'like', '%' . request('city') . '%'))
             ->when(request('min_price'), fn ($q) => $q->where('price', '>=', request('min_price')))
             ->when(request('max_price'), fn ($q) => $q->where('price', '<=', request('max_price')))
-            ->when(request('sort'), fn ($q) => $q->orderBy(request('sort'), request('direction', 'asc')), fn ($q) => $q->latest())
+            ->when(request('sort'), fn($q) => $q->sortSafe(request('sort'), request('direction'), 'created_at', 'desc'), fn ($q) => $q->latest())
             ->paginate(request('per_page', 12))
             ->withQueryString();
 
